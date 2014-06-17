@@ -6,6 +6,7 @@
     <meta name="description" content="Early iteration of list app client side">
   </head>
   <body ng-app="clientApp" ng-controller="listController">
+
     <table border="1">
       <thead>
         <tr><th colspan="3">Main List (Alpha)</th></tr>
@@ -18,6 +19,17 @@
         </tr>
       </tbody>
     </table>
+    <button ng-click="refresh()">Refresh</button><br/><br/>
+
+    Enter a New List Item:<br/>
+    <form ng-submit="postListItem( title, description )">
+        Title:<br/>
+        <input name="title" ng-model="title" type="text"><br/>
+        Description:<br/>
+        <input name="description" ng-model="description" type="text"><br/>
+        <input type="submit" value="Submit" />
+    </form>
+
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
