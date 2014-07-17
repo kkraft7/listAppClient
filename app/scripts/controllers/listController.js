@@ -14,14 +14,13 @@ angular.module('clientApp.controllers', [])
 
         getListItems();     // When/how does this get called? Initial page load?
 
-        $scope.refresh = function() {
-            getListItems();
-        };
+        $scope.refresh = function() { getListItems() };
 
         function getListItems() {
             listApiService.getMainList().success(function (response) {
                 $scope.mainList = response.listItems;
             });
+            // Add failure() handler?
         }
 
         $scope.postListItem = function( newTitle, newDescription ) {
@@ -33,5 +32,8 @@ angular.module('clientApp.controllers', [])
                 // Can I factor out a drawList() routine?
                 getListItems();
             });
+            // Add failure() handler?
         };
+
+       // Define getListItem(), deleteListItem(), updateListItem()?
     });

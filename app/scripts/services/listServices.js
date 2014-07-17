@@ -6,6 +6,8 @@ angular.module('clientApp.services', []).
             return $http.get( "http://localhost:8080/main-list" );
         };
 
+        // Define getListItem(), deleteListItem(), updateListItem()?
+
         listApi.postListItem = function( newTitle, newDescription ) {
             var newListItem = { title: newTitle, description: newDescription };
             return $http.post( "http://localhost:8080/main-list", newListItem );

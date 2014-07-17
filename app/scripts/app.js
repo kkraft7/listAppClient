@@ -4,7 +4,7 @@
  * @ngdoc overview
  * @name clientApp
  * @description
- * # clientApp
+ * # Early iteration of list app client side
  *
  * Main module of the application.
  */

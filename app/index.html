@@ -5,6 +5,7 @@
     <title>List App 1.0 (Alpha)</title>
     <meta name="description" content="Early iteration of list app client side">
   </head>
+  <!-- Need to research page layout in Angular -->
   <body ng-app="clientApp" ng-controller="listController">
 
     <table border="1">
@@ -13,8 +14,8 @@
       </thead>
       <tbody>
         <tr ng-repeat="listItem in mainList">
-          <td>{{$index + 1}}</td>
-          <td>{{listItem.title}}</td>
+          <td>{{$index + 1}}</td>   <!-- Replace this with actual ID used to reference item on server side? -->
+          <td>{{listItem.title}}</td>   <!-- Make title click through to a list item? Actually should display automatically when selected -->
           <td>{{listItem.description}}</td>
         </tr>
       </tbody>
